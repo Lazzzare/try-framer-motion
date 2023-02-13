@@ -10,7 +10,7 @@ function App() {
           x: 500,
           y: 300,
           backgroundColor: color,
-          transition: { delay: 0.5, type: "spring" },
+          transition: { delay: 0.5, type: "spring", damping: 5 },
         }}
       ></motion.div>
       <button onClick={() => setColor("blue")}>Make it blue</button>
