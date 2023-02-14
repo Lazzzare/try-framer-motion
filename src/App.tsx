@@ -1,20 +1,32 @@
-import { delay, motion } from "framer-motion";
+import { delay, motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 function App() {
   const [color, setColor] = useState("red");
+  const x = useMotionValue(0);
+
   return (
     <div>
       <motion.div
         className="red-box"
-        whileTap={{ scale: 1.1 }}
+        style={{ x }}
         animate={{
-          x: 500,
-          y: 300,
           backgroundColor: color,
-          transition: { delay: 0.5, type: "spring", damping: 5 },
         }}
+        // whileTap={{ scale: 1.1 }}
+        // animate={{
+        //   x: 650,
+        //   y: 400,
+        //   backgroundColor: color,
+        //   transition: { delay: 0.5, type: "spring", damping: 5 },
+        // }}
       ></motion.div>
-      <button onClick={() => setColor("blue")}>Make it blue</button>
+      <button
+        onClick={() => {
+          x.set(100);
+        }}
+      >
+        Make it blue
+      </button>
     </div>
   );
 }
