@@ -6,6 +6,7 @@ function App() {
     <div>
       <motion.div
         className="red-box"
+        whileTap={{ scale: 1.1 }}
         animate={{
           x: 500,
           y: 300,
