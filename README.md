@@ -1,2 +1,2 @@
 # try-framer-motion
-[https://playful-gumption-dba031.netlify.app/](Live Site)
+[Live Site](https://playful-gumption-dba031.netlify.app/)
